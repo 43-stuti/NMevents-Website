@@ -46,6 +46,11 @@ const router = new VueRouter({
     } else {
       return {x: 0 , y: 0}
     }
+  },
+  onerror: (error) => {
+    if (/loading chunk \d* failed./i.test(error.message)) {
+      window.location.reload()
+    }
   }
 })
 

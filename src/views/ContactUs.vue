@@ -5,7 +5,7 @@
 <script>
   import ContactUsPage from '@/components/Molecules/ContactUsPage.vue'
   export default {
-    name:'About',
+    name:'ContactUs',
     components: {
       ContactUsPage
     }

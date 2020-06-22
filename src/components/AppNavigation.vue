@@ -33,11 +33,11 @@
           <v-row justify = "end" align="center">
               <v-toolbar-side-icon >
                 <router-link to="/">
-                  <v-img class="mr-3" src="/icon.jpeg" height="30px" width="40px"> 
+                  <v-img class="mr-3" src="/favicon.png" height="30px" width="40px"> 
                   </v-img>
                 </router-link>
               </v-toolbar-side-icon>
-              <v-toolbar-title class="ml-2 body-1 font-weight-light grey--text text--darken-1 hidden-sm-and-down mt-2">
+              <v-toolbar-title class="body-1 font-weight-regular pink--text text--darken-2 hidden-sm-and-down mt-2">
                 NM Creations
               </v-toolbar-title>
             <v-spacer class="hidden-md-and-up"></v-spacer>

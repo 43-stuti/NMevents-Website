@@ -71,7 +71,7 @@ import Cards from '@/components/Atoms/Cards.vue'
         return{
             slides:[
                 {
-                title: "Nikita weds Surabh",
+                title: "Nikita weds Saurabh",
                 description:'From Haldi, Mehandi, Phere to their first Makar Sankranti. We had the pleasure of giving them the authentic Marathi wedding experience they had dreamt of.',
                 image: '/Project1.jpeg',
                 styles:{

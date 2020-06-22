@@ -57,7 +57,7 @@ export default {
     return {
       Classes : {
         CoverText : 'text-h4 text-sm-h4 text-md-h2 text-lg-h2 text-xl-h1 font-weight-black text-center',
-        SubText : 'mt-12 text-h6 text-lg-h5 font-weight-thin pink--text text--darken-1 text-center'
+        SubText : 'mt-12 text-h6 text-lg-h5 font-weight-regular pink--text text--darken-1 text-center'
       }
     }
   },

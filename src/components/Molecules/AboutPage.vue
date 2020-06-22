@@ -83,7 +83,6 @@
                 </v-row>
             </v-container>
         </v-container>
-        
     </v-container>
     <Footer></Footer>
  </span>
@@ -100,7 +99,7 @@ export default {
             {   
                 id:"1",
                 image:'/Aishwarya.jpeg',
-                title:'Aishwarya ',
+                title:'Payal Kushwah ',
                 description:'Hospitality Head'
             },
             {   

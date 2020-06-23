@@ -1,5 +1,5 @@
-import firebase from 'firebase';
-
+import * as firebase from 'firebase/app';
+import 'firebase/firestore'
 
  var firebaseConfig = {
     apiKey: "AIzaSyD7P4Rd5vBTO8GeSbhpqBA8SyCxy8tVGUE",
@@ -11,6 +11,15 @@ import firebase from 'firebase';
     appId: "1:813452328686:web:92a038072dca34c2f8fdff",
     measurementId: "G-S1ZC051H7V"
   };
+
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
+
+  const db = firebase.firestore();
+  const Projects = db.collection("Projects");
+  const Testimonials = db.collection("Testimonials");
+  export {
+    db,
+    Projects,
+    Testimonials
+  }

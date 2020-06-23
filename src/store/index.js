@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import firebase from 'firebase';
+const fb = require('../firebase/index.js')
 import createPersistedState from 'vuex-persistedstate'
 Vue.use(Vuex)
 
@@ -32,7 +32,7 @@ export default new Vuex.Store({
     async getGalleryImages({ state, commit }) {
       if(!state.ImagesFetched) {
         try {
-          var colRef = firebase.firestore().collection("Projects");
+          var colRef = fb.Projects;
           var images = await colRef.get();
           var imageData = images.docs.map(doc => doc.data());
           commit('setGalleryImages', imageData);
@@ -46,7 +46,7 @@ export default new Vuex.Store({
     async getTestimonials({ state, commit }) {
       if(!state.TestimonialsFetched) {
         try {
-          var colRef = firebase.firestore().collection("Testimonials");
+          var colRef = fb.Testimonials;
           var testimonials = await colRef.get();
           var testimonialData = testimonials.docs.map(doc => doc.data());
           commit('setTestimonials', testimonialData);

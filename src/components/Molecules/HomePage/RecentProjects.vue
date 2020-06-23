@@ -73,7 +73,7 @@ import Cards from '@/components/Atoms/Cards.vue'
                 {
                 title: "Nikita weds Saurabh",
                 description:'From Haldi, Mehandi, Phere to their first Makar Sankranti. We had the pleasure of giving them the authentic Marathi wedding experience they had dreamt of.',
-                image: '/Project1.jpeg',
+                image: 'https://firebasestorage.googleapis.com/v0/b/nm-website-10062.appspot.com/o/Project1.jpeg?alt=media&token=3536e2b4-ad6f-436b-862f-67f2b87e2d64',
                 styles:{
                      card : {
                      'background-color' : "#6d7994"
@@ -89,7 +89,7 @@ import Cards from '@/components/Atoms/Cards.vue'
                 {
                 title: 'Ankita weds Ashirwad',
                 description:"Fulfliing Ankita's desire for a fairy tale wedding. We curated the event with elegants elements, soothing lights and shimmer. A sparkly start to their forever.",
-                image: '/Project2.jpeg',
+                image: 'https://firebasestorage.googleapis.com/v0/b/nm-website-10062.appspot.com/o/Project2.jpeg?alt=media&token=fa77c48e-b472-47fe-b376-db1740e4c35b',
                 styles:{
                          card : {
                             'background-color' : "#B44772"

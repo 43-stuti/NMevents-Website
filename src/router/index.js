@@ -38,7 +38,7 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
   mode: 'hash',
-  base: '/',
+  base: '',
   routes,
   scrollBehavior (to,from,savedPosition) {
     if(savedPosition) {

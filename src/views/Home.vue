@@ -1,28 +1,30 @@
 <template>
   <div>
-    <v-container fluid
+    <v-container fluid class="HomeHero" fill-width fill-height
       v-bind:style ="heroHeight"
     >
-    <v-row class="Flowers mt-12">
+    <v-row class="Flowers">
         <ThreeTest/>
       </v-row>
-      <v-row class="HomeHero" justify = 'center' align='center' n-gutters> 
-        <v-col class = "Welcome my-12" justify = "center" align = "center"
-              :cols = 10
-              :lg = 8
-              :sm = 10
-              :md = 7>
-        
-          <div>
-            <v-row class = "NewFont" v-bind:class="[Classes.CoverText]" justify = 'center' align='center'>
-              Crafting your dream events.
-            </v-row>
-            <v-row v-bind:class="[Classes.SubText] " justify = 'center' align='center'> 
-              Marriages . Seminars . Concerts
-            </v-row>
-          </div>
-        </v-col>
-      </v-row>
+      <v-container align="center">
+        <v-row align="center"> 
+          <v-col class = "Welcome my-12" align = "center"
+                :cols = 10
+                :lg = 8
+                :sm = 10
+                :md = 7>
+          
+            <div>
+              <v-row  v-bind:class="[Classes.CoverText]" align='center'>
+                Crafting your dream events.
+              </v-row>
+              <v-row v-bind:class="[Classes.SubText] " align='center'> 
+                Marriages . Seminars . Concerts
+              </v-row>
+            </div>
+          </v-col>
+        </v-row>
+      </v-container>
       
     </v-container>
     <RecentProjects></RecentProjects>
@@ -51,9 +53,9 @@ export default {
   data() {
     return {
       Classes : {
-        CoverText : 'text-h4 text-sm-h4 text-md-h2 text-lg-h2 text-xl-h1 font-weight-black text-center',
+        CoverText : 'text-h4 text-sm-h4 text-md-h2 text-lg-h2 text-xl-h1 font-weight-black text-left',
         CoverTextLight : 'text-h4 text-sm-h4 text-md-h4 text-lg-h4 text-xl-h1 font-weight-regular text-left pink--text text--darken-1 mt-4',
-        SubText : 'mt-8 text-h6 text-lg-h5 font-weight-regular pink--text text--darken-1 text-center'
+        SubText : 'mt-12 text-h6 text-lg-h5 font-weight-regular pink--text text--darken-1 text-left'
       }
     }
   },

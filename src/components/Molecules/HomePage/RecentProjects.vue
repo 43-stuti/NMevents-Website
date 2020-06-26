@@ -37,13 +37,13 @@
                             :sm = 4
                             :md = 5 >
                                 <v-row class="overlap">
-                                    <div class="text-h4 font-weight-medium text-left">
+                                    <div class="text-h4 font-weight-medium text-left white--text">
                                         Nikita
                                     </div>
                                     <div class="text-h5 font-weight-bold text-left ml-1 pink--text">
                                         weds
                                     </div>
-                                    <div class="text-h4 font-weight-medium text-left ml-1">
+                                    <div class="text-h4 font-weight-medium text-left ml-1 white--text">
                                         Saurabh
                                     </div>
                                     <div class="text-subtitle-1 font-weight-medium text-left mt-8 grey--text">
@@ -109,8 +109,8 @@
                 }
             ],
             Classes: {
-                SectionHeading : 'grey--text text--darken-4',
-                SectionSubHeading : 'text-h5 font-weight-bold mt-2'
+                SectionHeading : 'cyan--text text--darken-2',
+                SectionSubHeading : 'white--text text-h5 font-weight-bold mt-2'
             },
             spacing : "d-inline-flex"
         }
@@ -119,7 +119,7 @@
 </script>
 <style scoped>
  .Testimonial {
-   background: linear-gradient(rgba(151, 57, 57, 0) 70%,rgb(245, 245, 245) 100%);
+   background-color: rgb(44, 40, 40);
    width: 100%
  }
  .link {

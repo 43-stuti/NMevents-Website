@@ -51,13 +51,14 @@ export default {
               var m = model.clone();
               m.amplitude= Math.random()/6;
               m.shiftY = Math.floor(Math.random()*container.clientHeight)
-              m.position.y = 0.03;
-              m.position.x = i*5- 3;
-              m.shiftX = Math.floor(Math.random()*20);
+              m.position.y = 0;
+              m.position.x = i*6- 3;
+              m.shiftX = Math.floor(Math.random()*30);
               m.rotateX(Math.PI/4)
               group.add(m);
             }
           }
+          group.scale.set(this.scale.x,this.scale.y,1)
           this.scene.add( group );
         },
         // called while loading is progressing
@@ -96,14 +97,24 @@ export default {
         switch (this.$vuetify.breakpoint.name) {
           case 'xs':
           case 'sm':
-            return {   height: '350px',
-                      width: '300px' };
-          case 'md' :
-              return {   height: '550px',
-                      width: '400px' };
+            return {   height: '30px',
+                      width: '100px' };
+         
           default:
-            return {   height: '550px',
-                      width: '400px' };
+            return {   height: '100px',
+                      width: '160px' };
+        }
+      },
+      scale() {
+        switch (this.$vuetify.breakpoint.name) {
+          case 'xs':
+          case 'sm':
+            return {   x: 4,
+                      y: 4 };
+         
+          default:
+            return {   x: 3,
+                      y: 3 };
         }
       }
     }

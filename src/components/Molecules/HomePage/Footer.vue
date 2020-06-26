@@ -29,7 +29,7 @@
                     Explore
                 </v-row>
                 <div class="mt-6 ml-n3"> 
-                    <div class = "d-block" v-bind:class="[Classes.Description]" v-for="routes in links" 
+                    <div class = "d-block mb-4" v-bind:class="[Classes.Description]" v-for="routes in links" 
                     v-bind:key="routes.id">
                         <router-link class = "spacing"
                         :to="`${routes.page}`">{{routes.text}}</router-link>
@@ -48,7 +48,7 @@
                     Follow
                 </v-row>
                 <div class="mt-6 ml-n3">
-                   <div class = "d-block" v-bind:class="[Classes.Description]"> 
+                   <div class = "d-block mb-4" v-bind:class="[Classes.Description]"> 
                        <a href="https://www.facebook.com/nmcreationsforu/" class = "spacing" target="_blank"> Facebook </a>
                     </div>
                     <div class = "d-block" v-bind:class="[Classes.Description]"> 
@@ -90,8 +90,8 @@
          Classes: {
                 SectionHeading : 'grey--text text--darken-4',
                 SectionSubHeading : 'white--text text-h5 font-weight-black mt-2',
-                Description : 'white--text body-2 font-weight-thin mt-2 text-left',
-                Title : 'white--text subtitle-1 font-weight-bold mt-2'
+                Description : 'white--text body-1 font-weight-light mt-2 text-left',
+                Title : 'white--text text-h6 font-weight-black mt-2'
             },
             links: [
                 {
@@ -127,4 +127,8 @@
  .spacing { 
       color: #FFFFFF;
   } 
+  a {
+    color: white;
+    text-decoration: none;
+  }
 </style>

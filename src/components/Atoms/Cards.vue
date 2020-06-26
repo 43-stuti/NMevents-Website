@@ -4,7 +4,7 @@
     <v-container fluid align="center">
       <v-row class="mx-3 mt-2" align="center">
         <v-card-title>
-          <div class="text-h6 font-weight-bold" v-bind:style = item.styles.title>
+          <div class="text-h6 font-weight-bold" v-bind:style = item.styles.title align="center">
               {{item.title}}
           </div>
         </v-card-title>

@@ -1,51 +1,69 @@
 <template>
-  <v-container fluid fill-width class="Testimonial mt-12" justify = 'center' align='center'>
-    <v-container justify = 'center' align='center'>
-       <v-row  v-bind:class="[Classes.SectionHeading]">
-            Our Services
+  <v-container fluid fill-width class="Testimonial">
+    <v-container class ="my-8" justify = 'center' align='center'>
+      <v-container>
+        <v-row  v-bind:class="[Classes.SectionHeading]">
+              Our Services
+          </v-row>
+          <v-row  v-bind:class="[Classes.SectionSubHeading]">
+              Here is how we can help you
+          </v-row>
+        <v-row class="mt-12" >
+          <v-col v-for="item in services" 
+                          :item="item" 
+                          :key="item.id"
+                          :cols = 12
+                          :lg = 4
+                          :sm = 12
+                          :md = 5
+                          class="d-inline-block mt-12"
+                          >
+              <v-row>
+                <div class="text-h1 font-weight-black text-left pink--text text--darken-4">
+                    {{item.id}}
+                </div> 
+              </v-row>
+              <v-row class="Overlap mt-n12">
+                <div class="text-h3 font-weight-medium text-left white--text">
+                    {{item.title}}
+                </div> 
+              </v-row>
+              <v-row class="mt-5">
+                <v-col 
+                    :cols = 12
+                    :lg = 7
+                    :sm = 12
+                    :md = 7>
+                
+                  <div class="text-subtitle-2 text-left white--text">
+                      We also provide digital engagement for the dear ones who can't attend.
+                      We also provide digital 
+                  </div>
+                </v-col>
+              </v-row>
+          </v-col>
+          <v-col 
+          :cols = 12
+          :lg = 3
+          :sm = 12
+          :md = 5
+          class="font-weight-regular ml-4 mt-5"> 
+              We also provide digital engagement for the dear ones who can't attend
+              <div class="mt-4">
+                <router-link class="link text-subtitle-2 font-weight-regular"
+                  to="/contactUs">GET IN TOUCH</router-link>
+                
+              </div>
+          </v-col>
         </v-row>
-        <v-row  v-bind:class="[Classes.SectionSubHeading]">
-            Here is how we can help you
-        </v-row>
-      <v-row class="mt-8 ml-n8">
-        <v-col v-for="item in services" 
-                        :item="item" 
-                        :key="item.id"
-                        :cols = 12
-                        :lg = 3
-                        :sm = 12
-                        :md = 4
-                        >
-            <Cards :item="item" 
-                  :key="item.id"
-                  :outline="outline"
-                  :spacing = "spacing" />
-         </v-col>
-        <v-col 
-        :cols = 12
-        :lg = 3
-        :sm = 12
-        :md = 3
-         class="font-weight-regular ml-4"> 
-            We also provide digital engagement for the dear ones who can't attend
-            <div class="mt-4">
-              <router-link class="link text-subtitle-2 font-weight-regular"
-                to="/contactUs">GET IN TOUCH</router-link>
-              
-            </div>
-        </v-col>
-      </v-row>
+      </v-container>
     </v-container>
   </v-container>
 </template>
 
 <script>
-  import Cards from '@/components/Atoms/Cards.vue'
   export default {
     name: 'Services',
-    components : {
-      Cards
-    },
     data() {
       return{
         services:[
@@ -129,8 +147,8 @@
       outline : true,
       spacing : "ma-4",
       Classes: {
-                SectionHeading : 'grey--text text--darken-4',
-                SectionSubHeading : 'text-h5 font-weight-bold mt-2'
+                SectionHeading : 'pink--text text--darken-4 font-weight-bold',
+                SectionSubHeading : 'white--text text-h5 font-weight-bold mt-2'
               }
       }
     }
@@ -138,7 +156,8 @@
 </script>
 <style scoped>
  .Testimonial {
-   width: 100% 
+   width: 100%;
+   background-color: rgb(88, 12, 44);
  }
  .link {
      color: #2f69b4;

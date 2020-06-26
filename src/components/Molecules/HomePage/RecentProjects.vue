@@ -1,5 +1,5 @@
 <template>
-    <v-container fluid fill-width class="Testimonial mt-12">
+    <v-container fluid fill-width class="Testimonial">
         <v-container fluid fill-width class="my-12">
             <v-container>
                 <v-row  v-bind:class="[Classes.SectionHeading]">
@@ -19,29 +19,38 @@
                             :cols = 12
                             :lg = 6
                             :sm = 12
+                            :md = 12
+                            :xs = 12
+                            >
+                    <v-row align = "end">
+                        <v-col  class="d-flex" :cols = 8
+                            :lg = 6
+                            :sm = 8
                             :md = 6
-                            :xs = 12
+                            :xs = 8
                             >
-                    <v-row>
-                        <v-col  class="d-flex" :cols = 12
-                            :lg = 5
-                            :sm = 12
-                            :md = 5
-                            :xs = 12
-                            >
-                            <v-img :src="item.image" aspect-ratio="0.8"></v-img>
+                            <v-img :src="item.image" aspect-ratio="0.7"></v-img>
                         </v-col>
-                        <v-col class="d-flex mt-n6 mt-sm-n6 mt-xl-0 mt-md-0 mt-lg-0
-                                             ml-md-n6 ml-lg-n6 ml-xl-n6"
-                            :cols = 12
-                            :lg = 7
-                            :sm = 12
-                            :md = 7 >
-                            <Cards :item = item
-                                     :spacing = "spacing"
-                            >
-                                  
-                                 </Cards>
+                        <v-col class="d-flex ml-n1" align = "end"
+                            :cols = 2
+                            :lg = 2
+                            :sm = 4
+                            :md = 5 >
+                                <v-row class="overlap">
+                                    <div class="text-h4 font-weight-medium text-left">
+                                        Nikita
+                                    </div>
+                                    <div class="text-h5 font-weight-bold text-left ml-1 pink--text">
+                                        weds
+                                    </div>
+                                    <div class="text-h4 font-weight-medium text-left ml-1">
+                                        Saurabh
+                                    </div>
+                                    <div class="text-subtitle-1 font-weight-medium text-left mt-8 grey--text">
+                                        ~ 21-05-2020
+                                    </div>
+                                </v-row>
+                               
                         </v-col>
                     </v-row>
                 </v-col>
@@ -60,13 +69,9 @@
 </template>
 
 <script>
-import Cards from '@/components/Atoms/Cards.vue'
 
   export default {
     name: 'RecentProjects',
-    components:{
-        Cards
-    },
     data() {
         return{
             slides:[
@@ -114,12 +119,18 @@ import Cards from '@/components/Atoms/Cards.vue'
 </script>
 <style scoped>
  .Testimonial {
-background: linear-gradient(rgba(151, 57, 57, 0) 70%,#F5F5F5 100%);
+   background: linear-gradient(rgba(151, 57, 57, 0) 70%,rgb(245, 245, 245) 100%);
    width: 100%
  }
  .link {
      color: #2f69b4;
      text-decoration: none;
  }
- 
+ .underline { 
+     height: 4px;
+ }
+ .overlap { 
+     margin-bottom: 10px;
+     z-index: 100;
+ }
 </style>

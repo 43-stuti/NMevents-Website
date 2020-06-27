@@ -121,7 +121,7 @@
 </script>
 <style scoped>
  .Testimonial {
-   background: #37474F;
+   background: rgb(44, 40, 40);
    width: 100%
  }
  .spacing { 

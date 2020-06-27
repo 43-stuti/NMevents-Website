@@ -3,12 +3,19 @@
     <v-container fluid class="HomeHero" fill-width fill-height
       v-bind:style ="heroHeight"
     >
-    <v-row class="Flowers">
-        <ThreeTest/>
+    <v-row class="mt-n12">
+        <v-col class="Flowers" offset-xl="2" offset-lg="2" offset-md="2" offset="1"
+                :cols = 12
+                :lg = 12
+                :xs = 12
+                :sm = 12
+                :md = 7>
+          <ThreeTest/>
+        </v-col>
       </v-row>
       <v-container align="center">
         <v-row align="center"> 
-          <v-col class = "Welcome my-12" align = "center"
+          <v-col class = "Welcome mt-n12 mb-12" align = "center"
                 :cols = 10
                 :lg = 8
                 :sm = 10
@@ -55,7 +62,7 @@ export default {
       Classes : {
         CoverText : 'text-h4 text-sm-h4 text-md-h2 text-lg-h2 text-xl-h1 font-weight-black text-left',
         CoverTextLight : 'text-h4 text-sm-h4 text-md-h4 text-lg-h4 text-xl-h1 font-weight-regular text-left pink--text text--darken-1 mt-4',
-        SubText : 'mt-12 text-h6 text-lg-h5 font-weight-regular pink--text text--darken-1 text-left'
+        SubText : 'mt-12 text-body-1 font-weight-bold pink--text text--darken-1 text-left'
       }
     }
   },
@@ -79,11 +86,12 @@ export default {
   .HomeHero {
     height: 100%;
     z-index: -1;
-    background: linear-gradient( #f5f5f5 10%, #ffffff 40%, rgba(241, 227, 227, 0.7) 95%);
+    background-color:  rgba(255, 249, 253, 0.7);
   }
   .Flowers {
        z-index: 0;
        position: absolute;
+       margin-top: -100px;
   }
   .Welcome {
        z-index: 1;

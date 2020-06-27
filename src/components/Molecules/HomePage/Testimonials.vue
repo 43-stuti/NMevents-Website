@@ -69,7 +69,7 @@ import _ from 'lodash';
     data() {
       return{
          Classes: {
-                SectionHeading : 'grey--text text--darken-4',
+                SectionHeading : 'cyan--text text--darken-2 font-weight-medium',
                 SectionSubHeading : 'text-h5 font-weight-bold mt-2'
             }
       }

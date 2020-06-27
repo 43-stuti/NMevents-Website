@@ -56,6 +56,51 @@
         </v-row>
         </v-container>
     </v-container>
+    <v-container fluid fill-width>
+        <v-container>
+            <v-container>
+                <v-row>
+                    <v-col
+                        :cols = 12
+                        :lg = 6
+                        :sm = 12
+                        :md = 6
+                        :xl = 6>
+                        <v-row  class="black--text">
+                            Who we are
+                        </v-row>
+                        <v-row  class="text-h5 font-weight-bold mt-2 black--text">
+                            Meet our creative superheroes.
+                        </v-row>
+                    </v-col>
+                    <v-col
+                        :cols = 12
+                        :lg = 5
+                        :sm = 12
+                        :md = 6
+                        :xl = 6>
+                        <v-row>
+                            <div class="text-h1 font-weight-black text-left black--text">
+                                15
+                            </div> 
+                        </v-row>
+                        <v-row  class="text-subtitle-2 font-weight-regular black--text">
+                            yrs in the Industry
+                        </v-row>
+                        <v-row  class="mt-8">
+                            <div class="text-h1 font-weight-black text-left black--text">
+                                33
+                            </div> 
+                        </v-row>
+                        <v-row  class="text-subtitle-2 font-weight-regular black--text">
+                            yrs in the Industry
+                        </v-row>
+                    </v-col>
+                    
+                </v-row>
+            </v-container>
+        </v-container>
+    </v-container>
     <v-container class='Team' fluid fill-width>
         <v-container>
             <v-container class="my-12">
@@ -75,10 +120,31 @@
                         :md = 3
                         :xl = 3
                     >
-                    <ImageCards 
-                            :item="item" 
-                            :key="i">
-                    </ImageCards>
+                    <v-row align = "end">
+                        <v-col  class="d-flex" :cols = 8
+                            :lg = 8
+                            :sm = 8
+                            :md = 6
+                            :xs = 8
+                            >
+                            <v-img :src="item.image" aspect-ratio="0.5"></v-img>
+                        </v-col>
+                        <v-col class="d-flex ml-n1" align = "end"
+                            :cols = 4
+                            :lg = 4
+                            :sm = 4
+                            :md = 2 >
+                                <v-row class="Overlap">
+                                    <div class="text-h4 font-weight-regular text-left white--text">
+                                        {{item.title}}
+                                    </div>
+                                    <div class="text-subtitle-2 font-weight-medium text-left cyan--text text-accent-2">
+                                        {{item.description}}
+                                    </div>
+                                </v-row>
+                               
+                        </v-col>
+                    </v-row>
                     </v-col>
                 </v-row>
             </v-container>
@@ -89,7 +155,6 @@
  </template>
 
 <script>
-import ImageCards from '@/components/Atoms/ImageCards.vue'
 import Footer from '@/components/Molecules/HomePage/Footer.vue'
 export default {
     name:'AboutPage',
@@ -99,14 +164,14 @@ export default {
             {   
                 id:"1",
                 image:'/Aishwarya.jpeg',
-                title:'Payal Kushwah ',
+                title:'Payal',
                 description:'Hospitality Head'
             },
             {   
                 id:"2",
                 image:'/Natasha.jpeg',
                 title:'Natasha',
-                description:'CEO and Creative head'
+                description:'CEO and Creative'
             },
             {   
                 id:"3",
@@ -138,14 +203,13 @@ export default {
       }
     },
     components:{
-        ImageCards,
         Footer
     }
 }
 </script>
 <style scoped>
     .Cover {
-        background: linear-gradient(rgb(255, 251, 253) 10%,#ffffff 30%, rgb(235, 242, 245) 80%);
+        background-color:  rgba(255, 249, 253, 0.7);
         height: 100%;
     }
     .Test {
@@ -155,6 +219,10 @@ export default {
         opacity : 0.9;
     }
     .Team {
-        background-color:rgb(255, 245, 248)
+        background-color:  rgb(71, 4, 32);
+    }
+    .Overlap { 
+    margin-left: -40px;
+     z-index: 100;
     }
 </style>

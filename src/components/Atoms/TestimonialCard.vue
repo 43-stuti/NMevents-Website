@@ -22,7 +22,7 @@
                       :lg = 7
                       :sm = 10
                       :md = 7> 
-            <v-row  class = "text-h3 text-lg-h2 font-weight-thin blue--text text--lighten-1 text-center"
+            <v-row  class = "text-h3 text-lg-h2 font-weight-thin cyan--text text--darken-2 text-center"
            
                   >
                   "
@@ -30,8 +30,8 @@
             <v-row class="ml-6 mt-n8">
               {{item.Comment}}
             </v-row >
-            <v-row class="text-uppercase mt-4 caption blue--text text--lighten-1 font-weight-light ml-6">
-               - {{item.Name}}
+            <v-row class="text-uppercase mt-4 caption cyan--text text--darken-2 font-weight-regular ml-6">
+               ~ {{item.Name}}
             </v-row>
           </v-col>
       </v-row>

@@ -8,7 +8,7 @@
           <v-row  v-bind:class="[Classes.SectionSubHeading]">
               Here is how we can help you
           </v-row>
-        <v-row class="mt-12" >
+        <v-row class="mt-12" align="end">
           <v-col v-for="item in services" 
                           :item="item" 
                           :key="item.id"
@@ -35,7 +35,7 @@
                     :sm = 12
                     :md = 7>
                 
-                  <div class="text-subtitle-2 text-left white--text">
+                  <div class="text-subtitle-2 font-weight-light text-left white--text">
                       We also provide digital engagement for the dear ones who can't attend.
                       We also provide digital 
                   </div>
@@ -46,14 +46,28 @@
           :cols = 12
           :lg = 3
           :sm = 12
-          :md = 5
-          class="font-weight-regular ml-4 mt-5"> 
-              We also provide digital engagement for the dear ones who can't attend
+          :md = 3
+          class="ml-4"
+           > 
+            <v-row align="end">
+              <div class="font-weight-medium white--text">
+                We also provide digital engagement for the dear ones who can't attend
+              
+              </div>
               <div class="mt-4">
                 <router-link class="link text-subtitle-2 font-weight-regular"
-                  to="/contactUs">GET IN TOUCH</router-link>
-                
+                  to="/contactUs" align="end">
+                  <div class="underline my-2">
+                      </div>
+                    <div>
+                      GET IN TOUCH
+                      
+                    </div>
+                    <div class="underline my-2">
+                      </div>
+                  </router-link>
               </div>
+            </v-row>
           </v-col>
         </v-row>
       </v-container>
@@ -147,7 +161,7 @@
       outline : true,
       spacing : "ma-4",
       Classes: {
-                SectionHeading : 'pink--text text--darken-4 font-weight-bold',
+                SectionHeading : 'cyan--text text--accent-1 font-weight-bold',
                 SectionSubHeading : 'white--text text-h5 font-weight-bold mt-2'
               }
       }
@@ -160,7 +174,11 @@
    background-color: rgb(109, 9, 51);
  }
  .link {
-     color: #2f69b4;
+     color: #ffffff;
      text-decoration: none;
+ }
+ .underline {
+   background-color: #84FFFF;
+  height: 2px;
  }
 </style>

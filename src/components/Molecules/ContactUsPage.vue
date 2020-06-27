@@ -250,8 +250,8 @@ export default {
 }
 </script>
 <style scoped>
-.Cover {
-        background: linear-gradient(rgb(247, 252, 253) 10%, #ffffff, #f5f5eb 95%)
+.Cover { 
+        background-color: rgba(255, 249, 253, 0.7);
     }
 .Test {
         content: '';

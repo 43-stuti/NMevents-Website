@@ -14,7 +14,8 @@ export default {
       scene: null,
       renderer: null,
       mesh: null,
-      flowerBunch: null
+      flowerBunch: null,
+      petal: null
     }
   },
   methods: {
@@ -57,9 +58,9 @@ export default {
     },
     generateFlower() {
 	
-      let petalMat = new Three.MeshPhongMaterial({color: 0xeaeaea, side: Three.DoubleSide});
+      let petalMat = new Three.MeshPhongMaterial({color: 0xF06292, side: Three.DoubleSide});
       
-      let radius = 1;
+      let radius = this.scale.flowersize;
       
       // each petal mesh is made of a part of a sphere
       let petalGeom = new Three.SphereBufferGeometry( radius, 20, 20, Math.PI / 4, Math.PI / 2, 0.4, Math.PI * 0.9 );
@@ -78,27 +79,47 @@ export default {
         
         petalMeshes[i] = petalMesh.clone();
         // generating the petals, rotated around a pivot point
-        petalMeshes[i].rotation.y = rotationStep * i * 1.01;
-        petalMeshes[i].position.y = -i/2.5;
+        petalMeshes[i].rotation.y = rotationStep * i;
+        //petalMeshes[i].position.y = -i/2.5;
         petalMeshes[i].rotateY(Math.PI/3.5)
         group.add(petalMeshes[i])
       }
-      var previousPosition = 0;
+      var arrangementRadius = this.scale.arrangementRadius;
+      var arrangedFlowers = 6;
+      var angle = 360/arrangedFlowers
       this.flowerBunch = new Three.Group();
-      for(let i = 0; i < 2; i++) {
+      for(let i = 0; i < arrangedFlowers; i++) {
         let flower = group.clone();
         flower.rotateX(Math.PI / 2);
         flower.receiveShadow = true;
         flower.castShadow = true;
-        flower.position.x = (previousPosition + i*radius*4)  - 5 ;
-        //*flower.position.y = Math.random()*15 - radius*8 ;
-        flower.position.z = i*1.3;
+        flower.multiplier = Math.random();
+
+        flower.position.x = flower.position.x + Math.cos((Math.PI*i*angle)/180)*8 + Math.random()*3 ;
+        flower.position.y = flower.position.y + Math.sin((Math.PI*i*angle)/180)*arrangementRadius + Math.random()*4;
+       // flower.position.x = (Math.random()* i*radius*10)  - 6 ;
+        //flower.position.y = (Math.random()* i*radius*10) ;
+        flower.position.z = Math.random()*5
         this.flowerBunch.add(flower)
       }
+      this.petal = petalMesh.clone();
+      this.petal.rotateX(Math.PI/2);
+      this.petal.scale.set(4,1,5);
+      this.scene.add(this.petal)
       this.scene.add(this.flowerBunch)
     },
     render () {
-      
+      var time = Date.now() / 7000;
+
+      for ( var i = 0, l = this.flowerBunch.children.length; i < l; i ++ ) {
+        var child = this.flowerBunch.children[ i ];
+        var scaleX = Math.sin(3*Math.PI*(child.multiplier)*(time ) + 0.3) * 0.002
+        var scaleY = Math.sin(3*Math.PI*(child.multiplier)*(time ) + 0.3) * 0.009
+        child.position.x =  child.position.x + scaleX;
+        child.position.y =  child.position.y + scaleY;
+        //child.rotateX(Math.sin( time + child.shiftY * child.amplitude/2 ) * 0.002)
+        
+      }
       this.renderer.render(this.scene, this.camera);
       
     }
@@ -111,24 +132,34 @@ export default {
         switch (this.$vuetify.breakpoint.name) {
           case 'xs':
           case 'sm':
-            return {   height: '350px',
-                      width: '300px' };
-         
+            return {   height: '800px',
+                      width: '200px' };
+          case 'md':
+            return {   height: '1000px',
+                      width: '800px' };
           default:
-            return {   height: '400px',
-                      width: '600px' };
+            return {   height: '800px',
+                      width: '950px' };
         }
       },
       scale() {
         switch (this.$vuetify.breakpoint.name) {
           case 'xs':
           case 'sm':
-            return {   x: 4,
-                      y: 4 };
-         
+            return {
+              flowersize: 0.2,
+              arrangementRadius: 0.5
+            };
+          case 'md':
+            return {
+              flowersize: 0.2,
+              arrangementRadius: 1
+            }; 
           default:
-            return {   x: 3,
-                      y: 3 };
+            return {
+              flowersize: 0.4,
+              arrangementRadius: 7
+            };
         }
       }
     }

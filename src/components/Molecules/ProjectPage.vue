@@ -230,7 +230,7 @@ export default {
 </script>
 <style scoped>
     .Cover {
-        background: linear-gradient(#fff9f7 10%, #ffffff 30%, #f9f7fc 100%);
+        background-color:  rgba(255, 249, 253, 0.7); ;
         height: 14%;
     }
 </style>

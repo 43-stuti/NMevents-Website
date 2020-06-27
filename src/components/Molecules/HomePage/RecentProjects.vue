@@ -19,7 +19,7 @@
                             :cols = 12
                             :lg = 6
                             :sm = 12
-                            :md = 12
+                            :md = 6
                             :xs = 12
                             >
                     <v-row align = "end">
@@ -35,7 +35,7 @@
                             :cols = 2
                             :lg = 2
                             :sm = 4
-                            :md = 5 >
+                            :md = 2 >
                                 <v-row class="overlap">
                                     <div class="text-h4 font-weight-medium text-left white--text">
                                         Nikita
@@ -109,7 +109,7 @@
                 }
             ],
             Classes: {
-                SectionHeading : 'cyan--text text--darken-2',
+                SectionHeading : 'cyan--text text--darken-2 font-weight-medium',
                 SectionSubHeading : 'white--text text-h5 font-weight-bold mt-2'
             },
             spacing : "d-inline-flex"

@@ -1,5 +1,5 @@
 <template>
-    <v-container fluid fill-width class="Testimonial mt-12" justify = 'center' align='center'>
+    <v-container fluid fill-width class="Testimonial" justify = 'center' align='center'>
       <v-container class="my-12">
         <v-container>
           <v-row  v-bind:class="[Classes.SectionHeading]">

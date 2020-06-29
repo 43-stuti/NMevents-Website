@@ -3,36 +3,36 @@
     <v-container fluid class="HomeHero" fill-width fill-height
       v-bind:style ="heroHeight"
     >
-    <v-row class="mt-n12">
-        <v-col class="Flowers" offset-xl="2" offset-lg="2" offset-md="2" offset="1"
-                :cols = 12
-                :lg = 12
-                :xs = 12
-                :sm = 12
-                :md = 7>
-          <ThreeTest/>
-        </v-col>
-      </v-row>
-      <v-container align="center">
-        <v-row align="center"> 
-          <v-col class = "Welcome mt-n12 mb-12" align = "center"
-                :cols = 10
-                :lg = 8
-                :sm = 10
-                :md = 7>
-          
-            <div>
-              <v-row  v-bind:class="[Classes.CoverText]" align='center'>
-                Crafting your dream events.
-              </v-row>
-              <v-row v-bind:class="[Classes.SubText] " align='center'> 
-                Marriages . Seminars . Concerts
-              </v-row>
-            </div>
-          </v-col>
+        <v-row >
+            <v-col class="Flowers" offset-xl="2" offset-lg="2" offset-md="2" 
+                    :cols = 12
+                    :lg = 12
+                    :xs = 12
+                    :sm = 12
+                    :md = 7>
+              <ThreeTest home=true> </ThreeTest>
+            </v-col>
         </v-row>
-      </v-container>
-      
+        <v-container align="center">
+          <v-container>
+            <v-row align="center"> 
+              <v-col class = "Welcome mt-n12 mb-12" align = "center"
+                    :cols = 12
+                    :lg = 8
+                    :sm = 12
+                    :md = 8>
+                <div>
+                  <v-row  v-bind:class="[Classes.CoverText]" align='center'>
+                    Crafting your dream events.
+                  </v-row>
+                  <v-row v-bind:class="[Classes.SubText] " align='center'> 
+                    Marriages . Seminars . Concerts
+                  </v-row>
+                </div>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-container>
     </v-container>
     <RecentProjects></RecentProjects>
       <Services></Services>
@@ -85,6 +85,7 @@ export default {
   
   .HomeHero {
     height: 100%;
+    width: 100%;
     z-index: -1;
     background-color:  rgba(255, 249, 253, 0.7);
   }

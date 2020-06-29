@@ -3,6 +3,16 @@
     <v-container class="Cover" fluid fill-width fill-height
                     v-bind:style ="heroHeight"
     >
+        <v-row class="mt-n12">
+        <v-col class="Flowers" 
+                :cols = 12
+                :lg = 12
+                :xs = 12
+                :sm = 12
+                :md = 7>
+          <ThreeTest branches=true> </ThreeTest>
+        </v-col>
+      </v-row>
         <v-container >
             <v-row align="center">
                 <v-col v-bind:class="[Classes.CoverText]"
@@ -30,8 +40,9 @@
             </v-row>
         </v-container>
     </v-container>
-    <v-container class="my-12">
-        <v-container>
+     
+    <v-container class="Work" fluid fill-width>
+        <v-container class="my-12 ">
         <v-row>
             <v-col
             :cols = 5>
@@ -45,7 +56,7 @@
             :sm = 12
             >
                 <v-container>
-                    <v-row  v-bind:class="[Classes.SectionHeading]">
+                    <v-row class="cyan--text text--accent-1">
                         How we work
                     </v-row>
                     <v-row  v-bind:class="[Classes.SubText]">
@@ -56,31 +67,32 @@
         </v-row>
         </v-container>
     </v-container>
-    <v-container fluid fill-width>
-        <v-container>
+   
+   <v-container class="my-12" fluid fill-width>
+        <v-container class="my-12">
             <v-container>
                 <v-row>
                     <v-col
                         :cols = 12
-                        :lg = 6
+                        :lg = 5
                         :sm = 12
-                        :md = 6
+                        :md = 5
                         :xl = 6>
-                        <v-row  class="black--text">
+                        <v-row  class="pink--text text--darken-1">
                             Who we are
                         </v-row>
-                        <v-row  class="text-h5 font-weight-bold mt-2 black--text">
-                            Meet our creative superheroes.
+                        <v-row  class="text-h5 font-weight-medium mt-2 black--text">
+                            We work closely with our clients to understand your requirements and craft an experience that is unique to you.
                         </v-row>
                     </v-col>
-                    <v-col
+                    <v-col  offset-md="2"  offset-lg="2"  offset-xl="2"
                         :cols = 12
                         :lg = 5
                         :sm = 12
-                        :md = 6
+                        :md = 5
                         :xl = 6>
                         <v-row>
-                            <div class="text-h1 font-weight-black text-left black--text">
+                            <div class="text-h2 text-lg-h1 font-weight-black text-left pink--text text--darken-1">
                                 15
                             </div> 
                         </v-row>
@@ -88,7 +100,7 @@
                             yrs in the Industry
                         </v-row>
                         <v-row  class="mt-8">
-                            <div class="text-h1 font-weight-black text-left black--text">
+                            <div class="text-h2 text-lg-h1 font-weight-black text-left pink--text text--darken-1">
                                 33
                             </div> 
                         </v-row>
@@ -104,10 +116,10 @@
     <v-container class='Team' fluid fill-width>
         <v-container>
             <v-container class="my-12">
-                <v-row  class="black--text">
+                <v-row class="cyan--text text--accent-1">
                     Our Team
                 </v-row>
-                <v-row  class="text-h5 font-weight-bold mt-2 black--text">
+                <v-row  class="text-h5 font-weight-medium mt-2 white--text">
                     Meet our creative superheroes.
                 </v-row>
                 <v-row class="mt-10">
@@ -156,6 +168,7 @@
 
 <script>
 import Footer from '@/components/Molecules/HomePage/Footer.vue'
+import ThreeTest from '@/components/Molecules/HomePage/ThreePetal.vue'
 export default {
     name:'AboutPage',
     data()  {
@@ -183,7 +196,7 @@ export default {
             Classes : {
                 CoverText : 'text-h4 text-sm-h4 text-md-h2 text-lg-h2 text-xl-h1 font-weight-black text-left',
                 CoverTextLight : 'text-h4 text-sm-h4 text-md-h2 text-lg-h2 text-xl-h1 font-weight-regular text-left pink--text text--darken-1',
-                SubText : 'mt-4 text-h6 text-lg-h5 font-weight-bold text-left blue-grey--text text--darken-4',
+                SubText : 'mt-4 text-h6 text-lg-h5 font-weight-medium text-left white--text',
                 SectionHeading : 'grey--text text--darken-4',
                 SectionSubHeading : 'text-h5 font-weight-bold mt-2',
                 OverridingClass : 'text--white'
@@ -203,14 +216,21 @@ export default {
       }
     },
     components:{
-        Footer
+        Footer,
+        ThreeTest
     }
 }
 </script>
 <style scoped>
+    .Flowers {
+       z-index: 0;
+       position: absolute;
+       margin-top: -100px;
+  }
     .Cover {
         background-color:  rgba(255, 249, 253, 0.7);
         height: 100%;
+        z-index: -1
     }
     .Test {
         content: '';
@@ -219,7 +239,10 @@ export default {
         opacity : 0.9;
     }
     .Team {
-        background-color:  rgb(71, 4, 32);
+        background-color:  rgb(58, 1, 25);
+    }
+    .Work {
+        background-color: rgb(44, 40, 40);
     }
     .Overlap { 
     margin-left: -40px;

@@ -159,7 +159,7 @@ export default {
             Overlay:false,
             Classes : {
                 CoverText : 'text-h4 text-sm-h4 text-md-h2 text-lg-h2 text-xl-h1 font-weight-black text-left',
-                CoverTextLight : 'text-h4 text-sm-h4 text-md-h2 text-lg-h2 text-xl-h1 font-weight-medium text-left amber--text text--darken-2',
+                CoverTextLight : 'text-h4 text-sm-h4 text-md-h2 text-lg-h2 text-xl-h1 font-weight-medium text-left pink--text text--darken-12',
                 SubText : 'mt-4 text-h6 text-lg-h5 font-weight-medium text-left deep-purple--text text--darken-4',
                 SectionHeading : 'grey--text text--darken-4',
                 SectionSubHeading : 'text-h5 font-weight-bold mt-2',

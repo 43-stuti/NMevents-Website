@@ -19,25 +19,24 @@
                           class="d-inline-block mt-12"
                           >
               <v-row>
-                <div class="text-h1 font-weight-black text-left pink--text text--darken-4">
+                <div class="text-h2 text-sm-h2 text-md-h2 text-lg-h1 text-xl-h1 font-weight-black text-left pink--text text--darken-4">
                     {{item.id}}
                 </div> 
               </v-row>
-              <v-row class="Overlap mt-n12">
-                <div class="text-h3 font-weight-medium text-left white--text">
+              <v-row class="Overlap mt-n10">
+                <div class="text-h4 text-sm-h4 text-md-h4 text-lg-h4 text-xl-h4 font-weight-medium text-left white--text">
                     {{item.title}}
                 </div> 
               </v-row>
-              <v-row class="mt-5">
+              <v-row class="mt-2">
                 <v-col 
                     :cols = 12
                     :lg = 7
                     :sm = 12
                     :md = 7>
                 
-                  <div class="text-subtitle-2 font-weight-light text-left white--text">
-                      We also provide digital engagement for the dear ones who can't attend.
-                      We also provide digital 
+                  <div class="text-subtitle-2 font-weight-thin text-left white--text">
+                      We also provide digital engagement.
                   </div>
                 </v-col>
               </v-row>
@@ -45,12 +44,12 @@
           <v-col 
           :cols = 12
           :lg = 3
-          :sm = 12
-          :md = 3
+          :sm = 11
+          :md = 4
           class="ml-4"
            > 
-            <v-row align="end">
-              <div class="font-weight-medium white--text">
+            <v-row align="end" class="mt-12">
+              <div class="font-weight-regular white--text">
                 We also provide digital engagement for the dear ones who can't attend
               
               </div>
@@ -161,8 +160,8 @@
       outline : true,
       spacing : "ma-4",
       Classes: {
-                SectionHeading : 'cyan--text text--accent-1 font-weight-bold',
-                SectionSubHeading : 'white--text text-h5 font-weight-bold mt-2'
+                SectionHeading : 'cyan--text text--accent-1 font-weight-medium',
+                SectionSubHeading : 'white--text text-h5 font-weight-thin mt-2'
               }
       }
     }
@@ -171,7 +170,7 @@
 <style scoped>
  .Testimonial {
    width: 100%;
-   background-color: rgb(109, 9, 51);
+   background-color:  rgb(71, 4, 32);
  }
  .link {
      color: #ffffff;

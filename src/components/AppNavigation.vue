@@ -33,7 +33,7 @@
           <v-row justify = "end" align="center">
               <v-toolbar-side-icon >
                 <router-link to="/">
-                  <v-img class="mr-3" src="/favicon.png" height="30px" width="40px"> 
+                  <v-img class="mr-3" src="/favicon.ico" height="30px" width="40px"> 
                   </v-img>
                 </router-link>
               </v-toolbar-side-icon>

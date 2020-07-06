@@ -24,7 +24,7 @@
                             :xl = 12
                             align = "center"
                     >
-                        Memories created
+                        Memories 
                     </v-col>
                 
                 </v-row>

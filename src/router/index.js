@@ -56,7 +56,6 @@ const router = new VueRouter({
     }
   },
   onError: (error) => {
-    console.log('ON ERROR',error);
     if (/loading CSS chunk \d* failed./i.test(error.message)) {
       window.location.reload()
     }

@@ -19,16 +19,16 @@
                           class="d-inline-block mt-12"
                           >
               <v-row>
-                <div class="text-h2 text-sm-h2 text-md-h2 text-lg-h1 text-xl-h1 font-weight-black text-left pink--text text--darken-4">
+                <div class="WaterEffect text-h4 text-sm-h4 text-md-h2 text-lg-h2 text-xl-h2 font-weight-bold text-left">
                     {{item.id}}
                 </div> 
               </v-row>
-              <v-row class="Overlap mt-n10">
-                <div class="text-h4 text-sm-h4 text-md-h4 text-lg-h4 text-xl-h4 font-weight-medium text-left white--text">
+              <v-row class="Overlap mt-n5 mt-sm-n5 mt-md-n8 mt-lg-n8">
+                <div class="text-h6 text-sm-h6 text-md-h4 text-lg-h4 text-xl-h4 font-weight-medium text-left white--text">
                     {{item.title}}
                 </div> 
               </v-row>
-              <v-row class="mt-2">
+              <v-row class="mt-2 ml-n6">
                 <v-col 
                     :cols = 12
                     :lg = 7
@@ -36,7 +36,7 @@
                     :md = 7>
                 
                   <div class="text-subtitle-2 font-weight-thin text-left white--text">
-                      We also provide digital engagement.
+                      {{item.description}}
                   </div>
                 </v-col>
               </v-row>
@@ -48,12 +48,12 @@
           :md = 4
           class="ml-4"
            > 
-            <v-row align="end" class="mt-12">
-              <div class="font-weight-regular white--text">
+            <v-row align="end" class="mt-12 ml-n6 ml-sm-n6">
+              <div class="text-subtitle-2 font-weight-thin white--text">
                 We also provide digital engagement for the dear ones who can't attend
               
               </div>
-              <div class="mt-4">
+              <div class="mt-2">
                 <router-link class="link text-subtitle-2 font-weight-regular"
                   to="/contactUs" align="end">
                   <div class="underline my-2">
@@ -83,7 +83,7 @@
          {
           id : 1,
           title: 'Brand Events',
-          description:'',
+          description:'Brand promotions and promotional events',
           styles:{
             card : {
               'background-color' : "#FFFFFF"
@@ -98,7 +98,7 @@
         }, {
           id : 2,
           title: 'Weddings',
-          description:'',
+          description:'Decor, Catering, Sound and Culture specific events',
           styles:{
             card : {
               'background-color' : "#FFFFFF"
@@ -113,7 +113,7 @@
         }, {
           id : 3,
           title: 'Live Shows',
-          description:'',
+          description:'Concerts, Award, Dance and Music shows',
           styles:{
             card : {
               'background-color' : "#FFFFFF"
@@ -128,7 +128,7 @@
         }, {
           id : 4,
           title: 'Parties',
-          description:'',
+          description:'Birthdays, Kitty, Engagements and special requirements',
           styles:{
             card : {
               'background-color' : "#FFFFFF"
@@ -143,7 +143,7 @@
         }, {
           id : 5,
           title: 'Seminars',
-          description:'',
+          description:'Workshops and Corporate events',
           styles:{
             card : {
               'background-color' : "#FFFFFF"
@@ -172,12 +172,15 @@
    width: 100%;
    background-color:  rgb(71, 4, 32);
  }
+ .WaterEffect {
+   color: #5c062a;
+ }
  .link {
      color: #ffffff;
      text-decoration: none;
  }
  .underline {
    background-color: #84FFFF;
-  height: 2px;
+  height: 1px;
  }
 </style>

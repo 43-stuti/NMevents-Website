@@ -3,20 +3,30 @@
       <v-container class="my-12" justify = 'center' align='center'>
          <v-container> 
           <v-row>
-                <v-col
+                <v-col 
                     :cols = 12
                     :lg = 4
                     :sm = 12
                     :md = 4
                     :xl = 4
                 >
-                    <v-row  v-bind:class="[Classes.SectionSubHeading]">
-                    NM Creations
-                </v-row>
-                <div class="mt-6 ml-n3">
-                     <div class = "d-block" v-bind:class="[Classes.Description]"> Creating your best memories </div>
-                   
-                </div>
+                    
+                    
+                        <v-row class="mb-10">
+                            <div v-bind:class="[Classes.SectionSubHeading]">
+                                NM Creations
+                            </div>
+                            <div class="d-flex flex-column">
+                                <div v-bind:class="[Classes.Description]"> Creating your best memories </div>
+                                <div class="underline mt-2">
+                                </div>
+                            </div>
+                        </v-row>
+                        
+                    
+                    
+
+                    
                 </v-col>
                  <v-col
                     :cols = 6
@@ -89,9 +99,9 @@
       return{
          Classes: {
                 SectionHeading : 'grey--text text--darken-4',
-                SectionSubHeading : 'white--text text-h5 font-weight-black mt-2',
+                SectionSubHeading : 'white--text text-h6 font-weight-bold mt-2',
                 Description : 'white--text body-1 font-weight-light mt-2 text-left',
-                Title : 'white--text text-h6 font-weight-black mt-2'
+                Title : 'white--text text-h6 font-weight-regular mt-2'
             },
             links: [
                 {
@@ -131,4 +141,8 @@
     color: white;
     text-decoration: none;
   }
+  .underline {
+   background-color: #D81B60;
+    height: 0.5px;
+   }
 </style>

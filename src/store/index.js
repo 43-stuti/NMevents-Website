@@ -9,17 +9,17 @@ export default new Vuex.Store({
     storage: window.sessionStorage,
   })],
   state: {
-    ProjectImages : [],
+    EventImages : [],
     Testimonials : [],
-    ImagesFetched : false,
+    EventsFetched : false,
     TestimonialsFetched : false
   },
   mutations: {
-    setGalleryImages (state, payload) {
-      state.ProjectImages = payload
+    setEvents (state, payload) {
+      state.EventImages = payload
     },
-    setImageFetchedState (state,payload) {
-      state.ImagesFetched = payload
+    setEventsFetchedState (state,payload) {
+      state.EventsFetched = payload
     },
     setTestimonials (state, payload) {
       state.Testimonials = payload
@@ -29,16 +29,16 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    async getGalleryImages({ state, commit }) {
-      if(!state.ImagesFetched) {
+    async getEvents({ state, commit }) {
+      if(!state.EventsFetched) {
         try {
-          var colRef = fb.Projects;
-          var images = await colRef.get();
-          var imageData = images.docs.map(doc => doc.data());
-          commit('setGalleryImages', imageData);
-          commit('setImageFetchedState', true);
+          var colRef = fb.Events;
+          var events = await colRef.get();
+          var eventData = events.docs.map(doc => doc.data());
+          commit('setEvents', eventData);
+          commit('setEventsFetchedState', true);
         } catch (e) {
-          commit('setGalleryImages', []);
+          commit('setEvents', []);
         }
       }
         

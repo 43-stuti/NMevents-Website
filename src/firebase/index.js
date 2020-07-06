@@ -16,10 +16,10 @@ import 'firebase/firestore'
   firebase.initializeApp(firebaseConfig);
 
   const db = firebase.firestore();
-  const Projects = db.collection("Projects");
+  const Events = db.collection("Events");
   const Testimonials = db.collection("Testimonials");
   export {
     db,
-    Projects,
+    Events,
     Testimonials
   }

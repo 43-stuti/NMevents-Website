@@ -4,7 +4,7 @@
         <v-row 
           :justify="horizontalPosition" 
           align="center">
-          <v-col 
+          <v-col class="mt-6"
                   :cols = 4
                   :lg = 2
                   :sm = 4
@@ -12,7 +12,7 @@
                   :xl = 2
                   
                   >
-            <v-avatar size="80px">
+            <v-avatar :size="imageHeight">
                     <img alt="Avatar" :src = "item.Image">
             </v-avatar>
           </v-col>
@@ -30,7 +30,7 @@
             <v-row class="ml-6 mt-n8">
               {{item.Comment}}
             </v-row >
-            <v-row class="text-uppercase mt-4 caption cyan--text text--darken-2 font-weight-regular ml-6">
+            <v-row class="text-uppercase mt-4 caption cyan--text text--darken-2 font-weight-bold ml-6">
                ~ {{item.Name}}
             </v-row>
           </v-col>
@@ -52,7 +52,22 @@
           default:
             return 'left';
         }
+      },
+      imageHeight() {
+        switch (this.$vuetify.breakpoint.name) {
+          case 'xs':
+          case 'sm':
+            return '80px';
+          default:
+            return '120px';
+        }
       }
     }
   }
 </script>
+<style scoped>
+.underline {
+   background-color: #D81B60;
+    height: 0.5px;
+   }
+</style>

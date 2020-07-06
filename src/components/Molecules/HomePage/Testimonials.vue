@@ -16,7 +16,8 @@
             hide-delimiters
             show-arrows-on-hover
           >
-              <v-carousel-item class =  "mt-2"
+              <v-carousel-item class =  "cara mt-2"
+                  
                   v-for = "(item, i) in clientComments"
                   :item = "item"
                   :key="i"
@@ -44,6 +45,7 @@
             show-arrows-on-hover
           >
               <v-carousel-item class =  "mt-2"
+              v-bind:style ="containerHeight"
                   v-for = "(item, i) in guestComments"
                   :item = "item"
                   :key="i"
@@ -70,7 +72,7 @@ import _ from 'lodash';
       return{
          Classes: {
                 SectionHeading : 'cyan--text text--darken-2 font-weight-medium',
-                SectionSubHeading : 'text-h5 font-weight-bold mt-2'
+                SectionSubHeading : 'text-h5 font-weight-light mt-2'
             }
       }
     },
@@ -79,7 +81,7 @@ import _ from 'lodash';
         switch (this.$vuetify.breakpoint.name) {
           case 'xs':
           case 'sm':
-            return {height : '500px'};
+            return {height : '550px'};
           default:
             return {height : '300px'};
         }

@@ -3,4 +3,17 @@
 $body-font-family: 'Montserrat', sans-serif;
 $title-font: 'Libre Baskerville', serif;
 $heading-font-family: 'Libre Baskerville', serif;
+$headings : (
+    (
+      'h5': (
+        'font-family': $body-font-family,
+        'text-transform': false
+      ),
+      'subtitle-1': (
+        'font-family': $heading-font-family,
+        'text-transform': false
+      )
+    )
+);
+
 @import "~vuetify/src/styles/styles.sass";

@@ -162,19 +162,19 @@ export default {
           case 'sm':
             return {
               flowersize: 0.2,
-              petalSize: 0.6,
+              petalSize: 0.9,
               arrangementRadius: 0.5
             };
           case 'md':
             return {
               flowersize: 0.2,
-              petalSize: 0.6,
+              petalSize: 0.9,
               arrangementRadius: 1
             }; 
           default:
             return {
               flowersize: 0.2,
-              petalSize: 0.6,
+              petalSize: 0.9,
               arrangementRadius: 1
             };
         }

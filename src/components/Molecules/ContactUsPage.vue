@@ -14,7 +14,7 @@
                     </v-card>
                 </v-dialog>
                 </v-row>
-                <v-row class = "mt-12" align-center>
+                <v-row class = "mt-12 pt-12" align-center>
                     <v-col :cols= 12
                             :lg = 6
                             :md = 6
@@ -43,7 +43,7 @@
                                     <v-col
                                         :cols = 1
                                     >
-                                        <v-icon> phone </v-icon>
+                                        <v-icon color="black"> phone </v-icon>
                                     </v-col>
                                     <v-col class="ml-2"
                                         :cols = 8
@@ -55,7 +55,7 @@
                                     <v-col
                                         :cols = 1
                                     >
-                                        <v-icon> mail </v-icon>
+                                        <v-icon color="black"> mail </v-icon>
                                     </v-col>
                                     <v-col class="ml-2"
                                         :cols = 8
@@ -73,7 +73,7 @@
                             :xl = 6>
                             <v-card>
                                 <v-card-title v-bind:class="[Classes.SubText]">
-                                   <div class="mt-12 mx-4 mt-12 text-h6 text-lg-h5 font-weight-bold text-left grey--text text--darken-4">
+                                   <div class="mt-12 mx-4 mt-12 text-h5 font-weight-bold text-left pink--text text--darken-1">
                                         Reach out to us
                                    </div>
                                    
@@ -186,7 +186,7 @@ export default {
             Classes : {
                 CoverText : 'text-h4 text-sm-h4 text-md-h2 text-lg-h2 text-xl-h1 font-weight-black text-left',
                 CoverTextLight : 'text-h4 text-sm-h4 text-md-h2 text-lg-h2 text-xl-h1 font-weight-medium text-left',
-                SubText : 'mt-12 text-h6 text-lg-h5 font-weight-bold text-left grey--text text--darken-4',
+                SubText : 'text-h5 font-weight-light mt-12 text-left grey--text text--darken-4',
                 SectionHeading : 'grey--text text--darken-4',
                 SectionSubHeading : 'text-h5 font-weight-bold mt-2',
                 OverridingClass : 'text--white'

@@ -1,6 +1,6 @@
  <template>
  <span>
-    <v-container class="Cover" fluid fill-width fill-height
+    <v-container class="Cover" align="center" fluid fill-width fill-height
                     v-bind:style ="heroHeight"
     >
         <v-row class="mt-n12">
@@ -13,31 +13,34 @@
           <ThreeTest branches=true> </ThreeTest>
         </v-col>
       </v-row>
-        <v-container >
-            <v-row align="center">
-                <v-col v-bind:class="[Classes.CoverText]"
-                        :cols= 7
-                        :lg = 4
-                        :md = 5
-                        :sm = 7
-                        :xl = 4
-                >
-                    Hi, we're 
-                </v-col>
-               
-            </v-row>
-            <v-row>
-                <v-col v-bind:class="[Classes.CoverTextLight]"
-                    :cols= 10
-                    :lg = 6
-                    :md = 6
-                    :sm = 10
-                    :xl = 6
-                >
-                    NM Creations. 
-                     
-                </v-col>
-            </v-row>
+        <v-container align="center">
+            <v-container align="center" class="mt-n12 mb-12">
+                <v-row align="center">
+                    <v-col v-bind:class="[Classes.CoverText]"
+                            :cols= 12
+                            :lg = 4
+                            :md = 5
+                            :sm = 12
+                            :xl = 4
+                            align = "center"
+                    >
+                        Hi, we're 
+                    </v-col>
+                
+                </v-row>
+                <v-row>
+                    <v-col v-bind:class="[Classes.CoverTextLight]"
+                        :cols= 12
+                        :lg = 7
+                        :md = 7
+                        :sm = 12
+                        :xl = 7
+                    >
+                        NM Creation. 
+                        
+                    </v-col>
+                </v-row>
+            </v-container>
         </v-container>
     </v-container>
      
@@ -59,8 +62,8 @@
                     <v-row class="cyan--text text--accent-1">
                         How we work
                     </v-row>
-                    <v-row  v-bind:class="[Classes.SubText]">
-                        We work closely with our clients to understand your requirements and craft an experience that is unique to you.
+                    <v-row  class="text-h5 font-weight-thin mt-2 white--text">
+                       Our success is a result of the tireless diligence of the team to ensure that every component of the event works in a planned manner. 
                     </v-row>
                 </v-container>
             </v-col>
@@ -78,34 +81,35 @@
                         :sm = 12
                         :md = 5
                         :xl = 6>
-                        <v-row  class="pink--text text--darken-1">
+                        <v-row  class="pink--text text--darken-1 font-weight-bold">
                             Who we are
                         </v-row>
-                        <v-row  class="text-h5 font-weight-medium mt-2 black--text">
-                            We work closely with our clients to understand your requirements and craft an experience that is unique to you.
+                        <v-row  class="text-h5 font-weight-light mt-4 black--text">
+                            Founded in 2015, with the motivation to bridge the gap between professional and innovation-driven event management.
                         </v-row>
+                        
                     </v-col>
-                    <v-col  offset-md="2"  offset-lg="2"  offset-xl="2"
+                    <v-col  class = "mt-xs-12 mt-sm-12" offset-md="2"  offset-lg="2"  offset-xl="2"
                         :cols = 12
                         :lg = 5
                         :sm = 12
                         :md = 5
                         :xl = 6>
-                        <v-row>
+                        <v-row class="mt-md-n8 mt-lg-n8 mt-xl-n8">
                             <div class="text-h2 text-lg-h1 font-weight-black text-left pink--text text--darken-1">
-                                15
+                                5
                             </div> 
                         </v-row>
                         <v-row  class="text-subtitle-2 font-weight-regular black--text">
-                            yrs in the Industry
+                            Yrs in the Industry
                         </v-row>
                         <v-row  class="mt-8">
                             <div class="text-h2 text-lg-h1 font-weight-black text-left pink--text text--darken-1">
-                                33
+                                20
                             </div> 
                         </v-row>
                         <v-row  class="text-subtitle-2 font-weight-regular black--text">
-                            yrs in the Industry
+                            Members strong team
                         </v-row>
                     </v-col>
                     
@@ -119,7 +123,7 @@
                 <v-row class="cyan--text text--accent-1">
                     Our Team
                 </v-row>
-                <v-row  class="text-h5 font-weight-medium mt-2 white--text">
+                <v-row  class="text-h5 font-weight-light mt-2 white--text">
                     Meet our creative superheroes.
                 </v-row>
                 <v-row class="mt-10">
@@ -133,21 +137,22 @@
                         :xl = 3
                     >
                     <v-row align = "end">
-                        <v-col  class="d-flex" :cols = 8
+                        <v-col  class="d-flex" 
+                            :cols = 8
                             :lg = 8
                             :sm = 8
-                            :md = 6
+                            :md = 8
                             :xs = 8
                             >
-                            <v-img :src="item.image" aspect-ratio="0.5"></v-img>
+                            <v-img :src="item.image" :aspect-ratio="imageRatio"></v-img>
                         </v-col>
                         <v-col class="d-flex ml-n1" align = "end"
                             :cols = 4
                             :lg = 4
                             :sm = 4
-                            :md = 2 >
+                            :md = 4 >
                                 <v-row class="Overlap">
-                                    <div class="text-h4 font-weight-regular text-left white--text">
+                                    <div class="text-h6 text-sm-h6 text-md-h4 text-lg-h4 text-xl-h4 font-weight-regular text-left white--text">
                                         {{item.title}}
                                     </div>
                                     <div class="text-subtitle-2 font-weight-medium text-left cyan--text text-accent-2">
@@ -196,7 +201,7 @@ export default {
             Classes : {
                 CoverText : 'text-h4 text-sm-h4 text-md-h2 text-lg-h2 text-xl-h1 font-weight-black text-left',
                 CoverTextLight : 'text-h4 text-sm-h4 text-md-h2 text-lg-h2 text-xl-h1 font-weight-regular text-left pink--text text--darken-1',
-                SubText : 'mt-4 text-h6 text-lg-h5 font-weight-medium text-left white--text',
+                SubText : 'mt-4 text-h6 text-lg-h5 font-weight-thin text-left white--text',
                 SectionHeading : 'grey--text text--darken-4',
                 SectionSubHeading : 'text-h5 font-weight-bold mt-2',
                 OverridingClass : 'text--white'
@@ -212,6 +217,15 @@ export default {
             return {height: '550px'};
           default:
             return {height: '650px'};
+        }
+      },
+       imageRatio() {
+        switch (this.$vuetify.breakpoint.name) {
+          case 'xs':
+          case 'sm':
+            return '1';
+          default:
+            return '0.5';
         }
       }
     },
@@ -239,13 +253,13 @@ export default {
         opacity : 0.9;
     }
     .Team {
-        background-color:  rgb(58, 1, 25);
+        background-color:  rgb(71, 4, 32);
     }
     .Work {
         background-color: rgb(44, 40, 40);
     }
     .Overlap { 
-    margin-left: -40px;
+     margin-left: -30px;
      z-index: 100;
     }
 </style>

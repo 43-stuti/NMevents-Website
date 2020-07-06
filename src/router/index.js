@@ -33,6 +33,14 @@ Vue.use(VueRouter)
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "contactUs" */ '../views/ContactUs.vue')
+  },
+  {
+    path: '/projects/:slug',
+    name: 'PROJECTPAGE',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "projectPage" */ '../components/Molecules/ProjectPage.vue')
   }
 ]
 

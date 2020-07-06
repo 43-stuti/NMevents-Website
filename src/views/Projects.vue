@@ -1,13 +1,13 @@
  <template>
-     <ProjectPage></ProjectPage>
+     <AllProjects></AllProjects>
  </template>
 
 <script>
-  import ProjectPage from '@/components/Molecules/ProjectPage.vue'
+  import AllProjects from '@/components/Molecules/AllProjects.vue'
   export default {
     name:'Projects',
     components: {
-      ProjectPage
+      AllProjects
     }
   }
 </script>

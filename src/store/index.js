@@ -55,7 +55,6 @@ export default new Vuex.Store({
           commit('setTestimonials', []);
         }
       }
-        
     }
   },
   modules: {

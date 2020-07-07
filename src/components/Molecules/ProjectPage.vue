@@ -17,10 +17,14 @@
                             <span class="text-h5 text-sm-h5 text-md-h4 text-lg-h4 text-xl-h4 font-weight-medium text-left black--text">
                                 {{activeEvent.Bride}}
                             </span>
-                            <span class="text-h5 text-sm-h5 text-md-h4 text-lg-h4 text-xl-h4 font-weight-bold text-left ml-1 pink--text">
+                            <span v-if="activeEvent.EventType == 'Wedding'" class="text-h5 text-sm-h5 text-md-h4 text-lg-h4 text-xl-h4 font-weight-bold text-left ml-1 pink--text">
                                 weds
+                                
                             </span>
-                            <span class="text-h5 text-sm-h5 text-md-h4 text-lg-h4 text-xl-h4 font-weight-medium text-left ml-1 black--text">
+                            <div v-else class="text-h5 text-sm-h5 text-md-h4 text-lg-h4 text-xl-h4 font-weight-bold text-left ml-1 pink--text">
+                                {{activeEvent.EventType}}
+                            </div>
+                            <span v-if="activeEvent.EventType == 'Wedding'" class="text-h5 text-sm-h5 text-md-h4 text-lg-h4 text-xl-h4 font-weight-medium text-left ml-1 black--text">
                                 {{activeEvent.Groom}}
                             </span>
                         </div>

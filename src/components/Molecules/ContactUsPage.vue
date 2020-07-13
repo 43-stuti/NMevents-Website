@@ -48,7 +48,7 @@
                                     <v-col class="ml-2"
                                         :cols = 8
                                     >
-                                        9574065401
+                                        9179555499
                                     </v-col>
                                 </v-row>
                                 <v-row>
@@ -60,7 +60,7 @@
                                     <v-col class="ml-2"
                                         :cols = 8
                                     >
-                                        nm.creations@gmail.com
+                                        nmcreationsforu@gmail.com
                                     </v-col>
                                 </v-row>
                             </v-col>

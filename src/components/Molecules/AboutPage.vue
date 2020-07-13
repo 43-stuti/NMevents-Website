@@ -137,7 +137,7 @@
                         :xl = 3
                     >
                     <v-row align = "end">
-                        <v-col  class="d-flex" 
+                        <v-col  class="d-flex mt-6" 
                             :cols = 8
                             :lg = 8
                             :sm = 8
@@ -146,16 +146,16 @@
                             >
                             <v-img :src="item.image" :aspect-ratio="imageRatio"></v-img>
                         </v-col>
-                        <v-col class="d-flex ml-n1" align = "end"
-                            :cols = 4
-                            :lg = 4
-                            :sm = 4
-                            :md = 4 >
-                                <v-row class="Overlap">
-                                    <div class="text-h6 text-sm-h6 text-md-h4 text-lg-h4 text-xl-h4 font-weight-regular text-left white--text">
+                        <v-col class="d-flex ml-2" align = "end"
+                            :cols = 6
+                            :lg = 6
+                            :sm = 6
+                            :md = 6 >
+                                <v-row class="d-block Overlap mt-n12">
+                                    <div class="text-h6 text-sm-h6 text-md-h4 text-lg-h4 text-xl-h4 font-weight-regular text-left white--text ma-2">
                                         {{item.title}}
                                     </div>
-                                    <div class="text-subtitle-2 font-weight-medium text-left cyan--text text-accent-2">
+                                    <div class="text-subtitle-2 font-weight-medium text-left cyan--text text-accent-2 ma-2">
                                         {{item.description}}
                                     </div>
                                 </v-row>
@@ -181,21 +181,39 @@ export default {
             People:[
             {   
                 id:"1",
-                image:'/Aishwarya.jpeg',
+                image:'/Payal.jpeg',
                 title:'Payal',
-                description:'Hospitality Head'
+                description:'Finance Head'
             },
             {   
                 id:"2",
                 image:'/Natasha.jpeg',
                 title:'Natasha',
-                description:'CEO and Creative'
+                description:'Founder'
             },
             {   
                 id:"3",
                 image:'/Avinash.jpeg',
                 title:'Avinash',
                 description:'FnB Head'
+            },
+            {   
+                id:"4",
+                image:'/ShivSingh.jpeg',
+                title:'Shiv',
+                description:'Marketing Head'
+            },
+            {   
+                id:"5",
+                image:'/Aishwarya.jpeg',
+                title:'Aishwarya',
+                description:'Hospitality Head'
+            },
+            {   
+                id:"6",
+                image:'/Apoorva.jpeg',
+                title:'Apoorva',
+                description:'Creative Head'
             }
             ],
             Classes : {
@@ -259,7 +277,8 @@ export default {
         background-color: rgb(44, 40, 40);
     }
     .Overlap { 
-     margin-left: -30px;
+    background-color: rgb(44, 40, 40);
+    opacity: 0.8;
      z-index: 100;
     }
 </style>

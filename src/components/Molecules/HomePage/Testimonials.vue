@@ -34,7 +34,7 @@
         <v-container class="mt-8">
           
           <v-row  v-if = "guestComments.length" v-bind:class="[Classes.SectionSubHeading]" class="mb-8">
-              What our guests have to say
+              What our guests have to say.
           </v-row>
         </v-container>
         <v-row>
@@ -96,6 +96,7 @@ import _ from 'lodash';
       },
       clientComments() {
         return _.filter(this.contents,function(f) {
+          console.log('HMMM',f.Name,f.Type)
           return f.Type == 'Client'
         })
       },

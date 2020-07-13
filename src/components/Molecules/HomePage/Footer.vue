@@ -16,7 +16,7 @@
                             <div v-bind:class="[Classes.SectionSubHeading]">
                                 NM Creations
                             </div>
-                            <div class="d-flex flex-column">
+                            <div class="d-block flex-column">
                                 <div v-bind:class="[Classes.Description]"> Creating your best memories </div>
                                 <div class="underline mt-2">
                                 </div>

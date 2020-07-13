@@ -97,7 +97,7 @@
                 slug: 'nikhita-saurabh',    
                 Bride:"Nikhita",
                 Groom:"Saurabh",
-                Date: "20th Nov'19",
+                Date: "20 Nov'19",
                 description:'From Haldi, Mehandi, Phere to their first Makar Sankranti. We had the pleasure of giving them the authentic Marathi wedding experience they had dreamt of.',
                 image: "https://firebasestorage.googleapis.com/v0/b/nm-website-10062.appspot.com/o/WhatsApp%20Image%202020-06-12%20at%201.50.28%20PM%20(1).jpeg?alt=media&token=b2d05440-fd7c-4b63-bc18-781c37cb3c7d",
                 styles:{

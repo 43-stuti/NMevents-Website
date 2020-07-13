@@ -97,7 +97,7 @@
                 slug: 'nikhita-saurabh',    
                 Bride:"Nikhita",
                 Groom:"Saurabh",
-                Date: "21 Jan'20",
+                Date: "20th Nov'19",
                 description:'From Haldi, Mehandi, Phere to their first Makar Sankranti. We had the pleasure of giving them the authentic Marathi wedding experience they had dreamt of.',
                 image: "https://firebasestorage.googleapis.com/v0/b/nm-website-10062.appspot.com/o/WhatsApp%20Image%202020-06-12%20at%201.50.28%20PM%20(1).jpeg?alt=media&token=b2d05440-fd7c-4b63-bc18-781c37cb3c7d",
                 styles:{
@@ -116,7 +116,7 @@
                 slug: 'mayura-jalay',
                 Bride:"Mayura",
                 Groom:"Jalay",
-                Date: "22 Dec'19",
+                Date: "02 Feb'19",
                 description:"Fulfliing Ankita's desire for a fairy tale wedding. We curated the event with elegants elements, soothing lights and shimmer. A sparkly start to their forever.",
                 image: "https://firebasestorage.googleapis.com/v0/b/nm-website-10062.appspot.com/o/WhatsApp%20Image%202020-06-14%20at%208.16.41%20PM.jpeg?alt=media&token=250e8c68-a3a6-4d2f-9286-2ca1e115cbfc",
                 styles:{

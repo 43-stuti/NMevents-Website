@@ -78,7 +78,7 @@
                     Visit
                 </v-row>
                 <div class="mt-6 ml-n3">
-                     <div class = "d-block" v-bind:class="[Classes.Description]"> 1223 Flat 7, Albert Road, Gulmohar Colony </div>
+                     <div class = "d-block" v-bind:class="[Classes.Description]"> E-8/207 Trilanga Colony, Near PnB Bank, Bhopal(M.P), India </div>
                    
                 </div>
                 </v-col>
